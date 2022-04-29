@@ -44,6 +44,11 @@ int main(int argc, char *argv[]) {
     memset(memory, 's', 1);  // server is done
     // wait for answer
     while(memory[0] != 'c'); // wait for client answer
+    // check client answer
+    if (memory[MMAP_SIZE / 2 + 1] != '#') {
+      fprintf(stderr, "Wrong memory mapped file reading: '%c'", memory[MMAP_SIZE / 2 + 1]);
+      return 1;
+    }
   }
 
   // unmap the memory

@@ -16,6 +16,7 @@ gcc -Wall client.c -o client
 
 From a terminal, launch the server:
 ```
+mkdir /tmp/mmap
 ./server
 ```
 
@@ -24,7 +25,7 @@ From another terminal, time the client:
 time ./client
 ```
 
-The performance should be displayed (I am getting about 7.4 seconds on my laptop running Linux in VMware).
+The performance should be displayed (I am getting about 8.33 seconds on my laptop running Linux in VMware).
 
 ## Run in Docker
 
@@ -39,4 +40,4 @@ docker run -v mmap:/tmp/mmap server ./server &
 time docker run -v mmap:/tmp/mmap client ./client
 ```
 
-The performance is now 8.1 seconds on the same configuration.
+The performance is now 8.47 seconds on the same configuration.

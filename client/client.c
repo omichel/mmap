@@ -31,8 +31,10 @@ int main(int argc, char *argv[]) {
 
   for(int i = 0; i < MMAP_STEPS; i++) {
     while(memory[0] != 's'); // wait for server to be ready
+    // check that '*' character were received
+    char answer = (memory[MMAP_SIZE / 2 + 1] == '*') ? '#' : '?';
     // write to memory
-    memset(memory + 1, '?', MMAP_SIZE - 1);
+    memset(memory + 1, answer, MMAP_SIZE - 1);
     // notify
     memset(memory, 'c', 1);  // client is done
   }
