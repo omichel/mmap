@@ -45,4 +45,4 @@ The performance is now 8.47 seconds on the same configuration.
 
 ## Conclusion
 
-Memory mapped files are damn fast and the overhead of running them across docker containers is negligible.
+Memory mapped files are the fastest IPC between two processes and the overhead of running them across docker containers is negligible.
