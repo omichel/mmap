@@ -1,6 +1,7 @@
 # Memory Mapped File
 
 This project aims at benchmarking the performance of memory mapped files across various systems (native Linux, Docker container, etc.).
+
 It creates a memory mapped file of 200,000 bytes and fills it with `*` characters on server side.
 The client checks that at least one `*` character was received and writes back `?` characters.
 The server checks that at least one `?` character was received and repeats writing `*` characters up to 1 million times.
