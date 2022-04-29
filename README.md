@@ -42,3 +42,7 @@ time docker run -v mmap:/tmp/mmap client ./client
 ```
 
 The performance is now 8.47 seconds on the same configuration.
+
+## Conclusion
+
+Memory mapped files are damn fast and the overhead of running them across docker containers is negligible.
